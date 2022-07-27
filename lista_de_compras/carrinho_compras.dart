@@ -15,6 +15,12 @@ main() {
       imprimir();
     } else if (text == "remover") {
       remover();
+    } else if (text == "atualizar") {
+      imprimir();
+      print("==== Qual item deseja atualizar?");
+      String input = stdin.readLineSync() ?? "";
+      int item = int.parse(input);
+      produtos[item] = text;
     } else {
       produtos.add(text!);
       print("\x1B[2J\x1B[0;0H");
